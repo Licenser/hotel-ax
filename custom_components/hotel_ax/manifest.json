@@ -1,0 +1,14 @@
+{
+  "domain": "hotel_ax",
+  "name": "Hotel-AX",
+  "codeowners": ["@Licenser"],
+  "config_flow": true,
+  "documentation": "https://github.com/Licenser/hotel-ax",
+  "issue_tracker": "https://github.com/Licenser/hotel-ax/issues",
+  "iot_class": "cloud_polling",
+  "requirements": [
+    "opentelemetry-sdk>=1.20.0",
+    "opentelemetry-exporter-otlp-proto-http>=1.20.0"
+  ],
+  "version": "0.1.0"
+}

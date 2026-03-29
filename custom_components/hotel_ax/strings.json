@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hotel-AX: Axiom OTLP Integration",
+        "description": "Configure your Axiom credentials and region.",
+        "data": {
+          "api_token": "API Token",
+          "region": "Region"
+        }
+      },
+      "custom_domain": {
+        "title": "Custom Domain",
+        "description": "Enter your custom Axiom domain.",
+        "data": {
+          "custom_domain": "Domain (e.g., custom.axiom.co)"
+        }
+      },
+      "datasets": {
+        "title": "Dataset Configuration",
+        "description": "Configure the Axiom datasets for logs and metrics. These must already exist in your Axiom organization.",
+        "data": {
+          "logs_dataset": "Logs Dataset Name",
+          "metrics_dataset": "Metrics Dataset Name",
+          "ha_logs_enabled": "Forward HA System Logs",
+          "ha_logs_dataset": "HA System Logs Dataset Name",
+          "ha_logs_level": "Minimum Log Level"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Axiom. Check your domain and network connection.",
+      "invalid_auth": "Invalid API token. Please check your credentials.",
+      "invalid_dataset": "Dataset not found or inaccessible. Ensure it exists and your token has write permissions.",
+      "invalid_domain": "Invalid domain configuration.",
+      "unknown": "An unexpected error occurred. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This Axiom instance is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hotel-AX Options",
+        "description": "Reconfigure Hotel-AX settings.",
+        "data": {
+          "api_token": "API Token",
+          "region": "Region",
+          "custom_domain": "Custom Domain (if using Custom region)",
+          "logs_dataset": "Logs Dataset Name",
+          "metrics_dataset": "Metrics Dataset Name",
+          "flush_interval": "Flush Interval (seconds, 10-300)",
+          "exclude_entities": "Exclude Entity Patterns (comma-separated, e.g., sensor.temp_*, binary_sensor.door_*)",
+          "ha_logs_enabled": "Forward HA System Logs",
+          "ha_logs_dataset": "HA System Logs Dataset Name",
+          "ha_logs_level": "Minimum Log Level"
+        }
+      }
+    },
+    "error": {
+      "custom_domain_required": "Custom domain is required when using Custom region."
+    }
+  }
+}
